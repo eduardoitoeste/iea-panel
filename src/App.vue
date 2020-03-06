@@ -48,6 +48,7 @@
         <v-col cols="12" sm="12" md="12" class="text-center mb-n5 title" v-if="this.$store.getters.credentials.auth">
                 <h1 class="secondary--text">Bienvenido {{this.$store.getters.credentials.user.Apellidos}} {{this.$store.getters.credentials.user.Nombres}}.</h1>
         </v-col>
+        <v-btn @click="testExample(1)">excvample</v-btn>
         <transition name="fade">
          <router-view/>
         </transition>

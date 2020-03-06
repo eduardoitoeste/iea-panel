@@ -110,13 +110,21 @@ ipcMain.on('app_version', (event) => {
 });
 
 ipcMain.on('update-available-test', (event,data) => {
-  if(data == 1){
-    event.sender.send('update_available',{text:'Hay una nueva actualizacion disponible!',view:true,type:'warning',viewButtonReinicio:false});
-  }
 
-  if(data == 2){
-    event.sender.send('update-downloaded',{text:'La actualizacion ha terminado de descargar',view:true,type:'success',viewButtonReinicio:true});
-  }
+  let a = autoUpdater.checkForUpdates()
+  a.then(data=>{
+    console.log('success',data)
+  }).catch(err=>{
+    console.log('error',err)
+  })
+  // console.log('aaaaaaaaaaaaaaaaaaa',a)
+  // if(data == 1){
+  //   event.sender.send('update_available',{text:'Hay una nueva actualizacion disponible!',view:true,type:'warning',viewButtonReinicio:false});
+  // }
+
+  // if(data == 2){
+  //   event.sender.send('update-downloaded',{text:'La actualizacion ha terminado de descargar',view:true,type:'success',viewButtonReinicio:true});
+  // }
   
   
 });
