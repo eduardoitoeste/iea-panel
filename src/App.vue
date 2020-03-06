@@ -91,6 +91,10 @@ export default {
         console.log("%cVERSION "+arg.version, "font-family: ';Arial';, serif; color: blue; font-size: 20px");
       });
 
+      ipcRenderer.on('test_update', (event, arg) => {
+        console.log('dato de uodate',arg)
+      });
+
       ipcRenderer.on('update_available', (event, arg) => {
         this.alertUpdate.view = false
         setTimeout(() => {

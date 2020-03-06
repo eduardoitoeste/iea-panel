@@ -3,6 +3,13 @@
 import { app, protocol, BrowserWindow ,ipcMain } from 'electron'
 
 import  {autoUpdater} from "electron-updater";
+autoUpdater.requestHeaders = { "PRIVATE-TOKEN": "8efc50ca458d1bfbeb6dd486d284a8b1e52d547c" };
+autoUpdater.autoDownload = true;
+
+autoUpdater.setFeedURL({
+    provider: "github",
+    url: "https://github.com/eduardoitoeste/iea-panel.git"
+});
 // const autoUpdater = updater.autoUpdater;
 import {
   createProtocol,
@@ -113,8 +120,10 @@ ipcMain.on('update-available-test', (event,data) => {
 
   let a = autoUpdater.checkForUpdates()
   a.then(data=>{
+    event.sender.send('test_update',data);
     console.log('success',data)
   }).catch(err=>{
+    event.sender.send('test_update',err);
     console.log('error',err)
   })
   // console.log('aaaaaaaaaaaaaaaaaaa',a)
@@ -149,13 +158,7 @@ autoUpdater.on('update-downloaded', function (info) {
 ///////////////////
 // Auto upadater //
 ///////////////////
-// autoUpdater.requestHeaders = { "PRIVATE-TOKEN": "Fr5kt3Hs3Uy_Lsz4uX-x" };
-// autoUpdater.autoDownload = true;
 
-// autoUpdater.setFeedURL({
-//     provider: "generic",
-//     url: "https://gitlab.com/eduardoitoeste/iea-panel/-/jobs/artifacts/master/raw/dist?job=build"
-// });
 
 // autoUpdater.on('checking-for-update', function () {
 //     sendStatusToWindow('Checking for update...');
