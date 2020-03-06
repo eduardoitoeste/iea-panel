@@ -13,8 +13,8 @@
     "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps",
-    "build": "electron-builder build --win --publish never",
-    "deploy": "electron-builder build --win --publish always"
+    "deploy": "vue-cli-service electron:build --ia32 --publish always",
+    "build": "vue-cli-service electron:build --ia32 --publish never"
   },
   "build": {
     "appId": "com.iea.panel",
