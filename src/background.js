@@ -47,7 +47,8 @@ function createWindow () {
     createProtocol('app')
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
-    autoUpdater.checkForUpdates()
+    // autoUpdater.checkForUpdates()
+    autoUpdater.checkForUpdatesAndNotify()
   }
   win.maximize()
   win.on('closed', () => {
