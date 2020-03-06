@@ -3,7 +3,7 @@
 import { app, protocol, BrowserWindow ,ipcMain } from 'electron'
 
 import  {autoUpdater} from "electron-updater";
-autoUpdater.requestHeaders = { "PRIVATE-TOKEN": "8efc50ca458d1bfbeb6dd486d284a8b1e52d547c" };
+autoUpdater.requestHeaders = { "PRIVATE-TOKEN": "b69a88e17b5f4642a0a32999f6e36ef427025377" };
 autoUpdater.autoDownload = true;
 
 autoUpdater.setFeedURL({
