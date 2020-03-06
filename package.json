@@ -26,7 +26,7 @@
     "type": "git",
     "url": "https://github.com/eduardoitoeste/iea-panel.git"
   },
-  "main": "background.js",
+  "main": "src/background.js",
   "dependencies": {
     "axios": "^0.19.0",
     "core-js": "^2.6.5",
