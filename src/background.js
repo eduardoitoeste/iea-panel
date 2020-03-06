@@ -47,6 +47,7 @@ function createWindow () {
     createProtocol('app')
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
+    autoUpdater.checkForUpdates()
   }
   win.maximize()
   win.on('closed', () => {
@@ -92,8 +93,9 @@ app.on('ready', async () => {
     
   }
   
-  // autoUpdater.checkForUpdates()
+  
   createWindow()
+  
 })
 
 // Exit cleanly on request from parent process in development mode.
