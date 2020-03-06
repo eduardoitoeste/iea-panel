@@ -82,10 +82,10 @@ app.on('ready', async () => {
     }
 
   }else{
-    autoUpdater.checkForUpdates()
+    
   }
   
-  
+  autoUpdater.checkForUpdates()
   createWindow()
 })
 
