@@ -3,13 +3,13 @@
 import { app, protocol, BrowserWindow ,ipcMain } from 'electron'
 
 import  {autoUpdater} from "electron-updater";
-autoUpdater.requestHeaders = { "PRIVATE-TOKEN": "b69a88e17b5f4642a0a32999f6e36ef427025377" };
-autoUpdater.autoDownload = true;
+// autoUpdater.requestHeaders = { "PRIVATE-TOKEN": "b69a88e17b5f4642a0a32999f6e36ef427025377" };
+// autoUpdater.autoDownload = true;
 
-autoUpdater.setFeedURL({
-    provider: "github",
-    url: "https://github.com/eduardoitoeste/iea-panel.git"
-});
+// autoUpdater.setFeedURL({
+//     provider: "github",
+//     url: "https://github.com/eduardoitoeste/iea-panel.git"
+// });
 // const autoUpdater = updater.autoUpdater;
 import {
   createProtocol,
@@ -92,7 +92,7 @@ app.on('ready', async () => {
     
   }
   
-  autoUpdater.checkForUpdates()
+  // autoUpdater.checkForUpdates()
   createWindow()
 })
 

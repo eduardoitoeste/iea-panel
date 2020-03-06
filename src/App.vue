@@ -96,6 +96,7 @@ export default {
       });
 
       ipcRenderer.on('update_available', (event, arg) => {
+        console.log('update_available')
         this.alertUpdate.view = false
         setTimeout(() => {
           this.alertUpdate.view = arg.view
@@ -108,6 +109,7 @@ export default {
       });
 
       ipcRenderer.on('update-downloaded', (event, arg) => {
+        console.log('update-downloaded')
         this.alertUpdate.view = false
         setTimeout(() => {
           this.alertUpdate.view = arg.view
