@@ -14,19 +14,13 @@
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps",
     "build": "vue-cli-service electron:build --publish never",
-    "deploy": "vue-cli-service electron:build  --publish always"
-  },
-  "build": {
-    "appId": "com.iea.panel",
-    "mac": {
-      "category": "com.iea.panel"
-    }
+    "deploy": "vue-cli-service electron:build --publish always"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/eduardoitoeste/iea-panel.git"
   },
-  "main": "src/background.js",
+  "main": "background.js",
   "dependencies": {
     "axios": "^0.19.0",
     "core-js": "^2.6.5",
