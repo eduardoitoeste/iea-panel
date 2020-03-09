@@ -20,12 +20,6 @@
     "type": "git",
     "url": "https://github.com/eduardoitoeste/iea-panel.git"
   },
-  "build": {
-    "appId": "com.iea.panel",
-    "mac": {
-      "category": "com.iea.panel"
-    }
-  },
   "main": "background.js",
   "dependencies": {
     "axios": "^0.19.0",

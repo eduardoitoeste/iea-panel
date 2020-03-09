@@ -48,7 +48,7 @@ function createWindow () {
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
     // autoUpdater.checkForUpdates()
-    autoUpdater.checkForUpdatesAndNotify()
+    // autoUpdater.checkForUpdatesAndNotify()
   }
   win.maximize()
   win.on('closed', () => {
@@ -91,7 +91,7 @@ app.on('ready', async () => {
     }
 
   }else{
-    
+    autoUpdater.checkForUpdates()
   }
   
   
